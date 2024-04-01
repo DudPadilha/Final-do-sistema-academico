@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Área</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <a class="navbar-brand" href="/">Área</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/área/">Área</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/avaliação/">Avaliação</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/cidade/">Cidade</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/curso/">Curso</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/disciplina_curso/">Disciplina_Curso</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/disciplina/">Disciplina</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/frequência/">Frenquência</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/instituição/">Instituição</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/matrícula/">Matrícula</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/ocorrência/">Ocorrência</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/ocupação/">Ocupação</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/período/">Período</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/pessoa/">Pessoa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/tipo_avaliação/">Tipo Avaliação</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/turma/">Turma</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/admin/">Administração</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+<div class="container mt-5">
+    
+    <h1 class="text-center">Tabela de Áreas </h1>
+    <table class="table ">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for area in areas %}
+                <tr>
+                    <td><strong>{{area.id }}</strong></td>
+                    <td>{{ area.nome }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<!-- Incluindo jQuery e Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</html>
